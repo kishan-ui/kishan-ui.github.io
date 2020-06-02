@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+body {
+  background-color: rgb(201, 76, 76);
+}
+
+        <title>TRIGGERS AND CURSORS</title>
+        <link rel="stylesheet" href="style.css">
+</style>
+    </head>
+
+    <body>
+
+        <header>
+            
+            <nav>
+                <ul>
+<h1>ALL ABOUT TRIGGERS AND CURSORS</h2>
+<h2>Lets begin our discussion on triggers and cursors</h2>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Content</a></li>
+                    <li><a href="#contact">Questions</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="hero">
+                <div class="section-inner">
+                    <img src="https://image.slidesharecdn.com/cursorstriggersprocedures-141012091011-conversion-gate02/95/cursors-triggers-procedures-10-638.jpg?cb=1413105475-img">
+                    <img src="https://image.slidesharecdn.com/cursorstriggersprocedures-141012091011-conversion-gate02/95/cursors-triggers-procedures-7-638.jpg?cb=1413105475"-img">
+                    
+                </div>
+            </section>
+            <section id="about">
+                <div class="section-inner">
+                    <h2>All about triggers and cursors:</h2>
+<h3>In a database, a trigger is a procedure (code segment) that is executed automatically when some specific events occur in a table/view. Among its other uses, triggers are mainly used for maintaining integrity in a database. A cursor is a control structure used in databases to go through the database records. It is very similar to the iterator provided by many programming languages.
+
+What are Triggers?
+
+A trigger is a procedure (code segment) that is executed automatically when some specific events occur in a table/view of a database. Among its other uses, triggers are mainly used for maintaining integrity in a database. Triggers are also used for enforcing business rules, auditing changes in the database and replicating data. Most common triggers are Data Manipulation Language (DML) triggers that are triggered when data is manipulated. Some database systems support non-data triggers, which are triggered when Data Definition Language (DDL) events occur. Some examples are triggers that are fired when tables are created, during commit or rollback operations occur, etc. These triggers can be especially used for auditing. Oracle database system supports schema level triggers (i.e. triggers fired when database schemas are modified) such as After Creation, Before Alter, After Alter, Before Drop, After Drop, etc. The four main types of triggers supported by Oracle are Row Level triggers, Column Level triggers, Each Row Type triggers and For Each Statement Type triggers.
+
+What are Cursors?
+
+A cursor is a control structure used in databases to go through the database records. It is very similar to the iterator provided by many programming languages. In addition to traversing through records in a database, cursors also facilitate data retrieval, adding and deleting records. By defining the correct way, cursors can also be used to traverse backwards. When a SQL query returns a set of rows, those are actually processed using cursors. A cursor needs to be declared and assigned a name, before it could be used. Then the cursor needs to be opened using the OPEN command. This operation would place the cursor just before the first row of the result set of records. Then the cursor has to perform the FETCH operation to actually get a row of data in to the application. Finally, the cursor has to be closed using the CLOSE operation. Closed cursors can be opened again.
+
+What is the difference between Triggers and Cursors?
+
+A trigger is a procedure (code segment) that is executed automatically when some specific events occur in a table/view of a database, while a cursor is a control structure used in databases to go through the database records. A cursor can be declared and used within a trigger.</h3>
+                    <p>.</p>
+                    <h3>POINTS TO NOTE:</h3>
+                    <ul>
+                        <li>A cursor can be declared and used within a trigger. In such a situation, the declare statement would be inside the trigger.
+Then the scope of the cursor would be limited to that trigger. Within a trigger, if a cursor is declared on an inserted or a deleted table,
+such a cursor would not be accessible from a nested trigger.
+Once a trigger is completed, all the cursors created within the trigger will be de-allocated.
+</li>
+                        <li>A cursor can be basically referred to as a pointer to the context area.Context area is a memory area that is created by Oracle when SQL statement is processed.The cursor is thus responsible for holding the rows that have been returned by a SQL statement.Thus the PL/SQL controls the context area by the help of cursor.An Active set is basically the set of rows that the cursor holds. The cursor can be of two types: Implicit Cursor, and Explicit Cursor.</li>
+                        <li>A Trigger is basically a program which gets automatically executed in response to some events such as modification in the database.Some of the events for their execution are DDL statement, DML statement or any Database operation.Triggers are thus stored within the database and come into action when specific conditions match.Hence, they can be defined on any schema, table, view etc. There are six types of triggers: BEFORE INSERT, AFTER INSERT, BEFORE UPDATE, AFTER UPDATE, BEFORE DELETE, and AFTER DELETE.</li>
+                    </ul>
+<p1>.</p1>
+<h3>Advantages of Cursors:</h3>
+<u2>
+<li>They are helpful in performing the row by row processing and also row wise validation on each row.</li>
+<li>Better concurrency control can be achieved by using cursors.</li>
+<li>Cursors are faster than while loops.</li>
+</u2>
+<p2>.</p2>
+<h3>Disadvantages of Cursors:</h3>
+<u2>
+<li>They use more resources each time and thus may result in network round trip.</li>
+<li>More number of network round trips can degrade the performance and reduce the speed</li>
+</u2>
+<p3>.</p3>
+                    <h3>Advantages of Triggers:</h3>
+                    <u3>
+<li>They are helpful in keeping the track of all the changes within the database.</li>
+<li>They also help in maintaining the integrity constraints.</li>
+</u3>
+<p4>.</p4>
+<h3>Disadvantages of Triggers:</h3>
+<u4>
+<li>They are very difficult to view which makes the debugging also difficult.</li>
+<li>Too much use of the triggers or writing complex codes within a trigger can slow down the performance.</li>
+</u4>
+
+                </div>
+            </section>
+            <section id="contact">
+                <div class="section-inner">
+                    <h2>Contact me</h2>
+                    <p> For any questions,you can find me on:</p>
+                    <ul>
+                        <li><a href="https://www.instagram.com/dbms_geek/">Instagram</a></li>
+                    </ul>
+                    <p>Or, you can <a href="mailto:sarakishan22@gmail.com">send me an email</a>.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+         thanks for browsing and always feel free to come back!
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+
+
+
